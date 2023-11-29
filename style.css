@@ -1,0 +1,363 @@
+/* Estilização geral do site */
+body {
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: whitesmoke;
+}
+
+/* Estilização do header da página */
+header {
+    background-color: whitesmoke;
+}
+
+/* Estilização do logotipo */
+.logo {
+    height: 60px;
+    width: 60px;
+    margin-left: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Estilização do menu */
+nav {
+    right: 0;
+    position: absolute;
+    top: 25px;
+    left: 160px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 50px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: rgb(24, 21, 18);
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c02a31;
+    text-decoration: underline;
+}
+
+/* Estilização do carrossel */
+.slide-show {
+    overflow: hidden;
+}
+
+.slides-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list {--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list {--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list {--selected-item: 2;}
+
+/* Estilização da imagem do nosso serviço */
+.servico {
+    height: 50%;
+    width: 60%;
+    float: left;
+    margin: 0 20px 50px;
+}
+
+.titulo_serv {
+    clear: left;
+    text-align: center;
+    font-size: 2em;
+}
+
+.area_serv {
+    width: 90%;
+    text-align: justify;
+    margin: auto;
+    background-color: whitesmoke;
+    margin-bottom: 11%;
+    margin-top: 2%;
+}
+
+/* Titulos - padrao  */
+.titulo_padrao {
+    padding: 2%;
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+/* Estilização da sessão do mapa */
+.mapa {
+    background: linear-gradient(whitesmoke, #c02a31);
+}
+
+.mapa p {
+    text-align: center;
+}
+
+.mapa iframe {
+    display: block;
+    margin: auto;
+}
+
+/* Estilização da sessão de benefícios */
+.beneficios {
+    background-color: #c02a31;
+    float: right;
+}
+
+.conteudo_beneficios {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.lista_beneficios {
+    width: 50%;
+    display: inline-block;
+    margin-left: 21%;
+    list-style: "🍄";
+    transition: 400ms;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-size: medium;
+}
+
+.itens {
+    line-height: 2;
+}
+
+.img_beneficios {
+    width: 32%;
+    margin-right: 21%;
+    margin-top: 0;
+    box-shadow: 10px 10px 5px 0px black;
+    padding-top: 0%;
+    transition: 400ms;
+}
+
+.img_beneficios:hover {
+    opacity: 0.7;
+}
+
+.video_cano {
+    padding: 5%;
+    text-align: center;
+}
+
+.rodape {
+    background-color: black;
+    color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img_rodape {
+    height: 50px;
+    margin-right: 50px;
+}
+
+.contato {
+    text-align: left;
+    margin-left: 150px;
+}
+
+.contato p {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilização da sessão de planos de assinatura */
+.intr_serv {
+    background-color: #c02a31;
+    padding: 2% 0;
+    text-align: center; /* Centraliza o texto "Planos de Assinatura" */
+}
+
+.planos_assinatura {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plano {
+    width: 30%;
+    margin: 2% 0;
+    padding: 2%;
+    background-color: #ffffff; /* Fundo branco */
+    color: #c02a31; /* Cor do texto */
+    border: 2px solid #c02a31; /* Borda vermelha */
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave ao plano */
+}
+
+/* Estilização quando o mouse passa sobre o plano */
+.plano:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do plano */
+}
+
+.plano h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.plano img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.plano_p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.planos_beneficios {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+
+}
+
+.vantagens {
+    font-size: 0.9em;
+    text-align: left;
+   
+}   
+
+.cadastro-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+.reviews-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #c02a31;
+}
+
+.review-card {
+    max-width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review-content .review-text {
+    font-size: 1em;
+    color: #555;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

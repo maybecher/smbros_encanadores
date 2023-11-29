@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- arquivo de estilo sendo importado -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="src/img/icon.png">
+    <title>Super Mario Bros Encanadores</title>
+    
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="src/img/icon.png" alt="logo do site" title="Super Mario Bros Encanadores" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_self">Home</a></li>
+                    <li><a href="servicos.html" target="_self">Serviços</a></li>
+                    <li><a href="avaliacoes.html">Depoimentos</a></li>
+                    <li><a href="form.html">Fale Conosco</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- banner de fundo -->
+    <div class="slide-show">
+        <input type="radio" class="slide-controller" name="slide" checked />
+        <input type="radio" class="slide-controller" name="slide" />
+        <input type="radio" class="slide-controller" name="slide" />
+
+        <div class="slides-list">
+            <div class="slide">
+                <img src="src/img/carrossel 1.png" alt="Imagem 1 do carrossel" />
+            </div>
+            <div class="slide">
+                <img src="src/img/carrossel 2.png" alt="Imagem 2 do carrossel" />
+            </div>
+            <div class="slide">
+                <img src="src/img/carrossel 3.png" alt="Imagem 3 do carrossel" />
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="area_serv">
+            <h1 class="titulo_serv">Sobre o nosso serviço:</h1>
+            <img src="src/img/servico.jpg" alt="BROTHERS" class="servico">
+            <p class="decricao">Bem-vindo à Super Mario Bros Encanadores, onde a lendária equipe do Mario e do Luigi
+                está pronta para revolucionar o seu sistema de encanamento! Assim como eles enfrentam desafios no Reino
+                do Cogumelo, nossa equipe destemida encara cada vazamento, entupimento e reparo com a mesma dedicação
+                heróica. Com ferramentas tão poderosas quanto os cogumelos do Super Mario, desentupimos canos mais
+                rápido do que o Mario corre para salvar a Princesa. Nossos orçamentos são claros como blocos de moedas,
+                e nossa promessa de satisfação estrelada garante que não paramos até você estar completamente feliz.
+                Deixe a Super Mario Bros Encanadores cuidar do seu sistema, para que você possa voltar à sua rotina com
+                a tranquilidade de um dia ensolarado no Reino do Cogumelo. Conte conosco para um serviço que vai além
+                das expectativas e transforma seus problemas de encanamento em história do passado!</p>
+            
+        </section>
+
+        <section class="mapa">
+            <h1 class="titulo_padrao">Nosso estabelecimento</h1>
+            <p>Nosso estabelecimento está localizado em:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193730.2328223438!2d-74.03599824096676!3d40.65116134371215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24369470a592b%3A0x4109d18b6c5c7b05!2sQueens%2C%20NY%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1693521537163!5m2!1spt-BR!2sbr"
+                width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="beneficios">
+            <h1 class="titulo_padrao">Benefícios</h1>
+            <div class="conteudo_beneficios">
+                <ul class="lista_beneficios">
+                    <li class="itens"> Habilidades de Super Encanadores</li>
+                    <li class="itens">Disponibilidade 24 Horas</li>
+                    <li class="itens">Desentupimento Turbo</li>
+                    <li class="itens">Ferramentas Poderosas</li>
+                    <li class="itens">Satisfação Estrelada</li>
+                    <li class="itens">Serviço para Residências e Castelos</li>
+                </ul>
+                <img src="src/img/beneficios.jpg" class="img_beneficios">
+            </div>
+        </section>
+
+        <section class="video_cano">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/v8Ss53EDxLA?si=btCcv5rwJMEHran-"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        
+        <div class="contato">
+            <p>Local no Brooklin:</p>
+            <p>Rua do Cogumelo, 123</p>
+            <p>Número de telefone:</p>
+            <p>(123) 456-7890</p>
+        </div>
+        <img src="src/img/icon2.png" alt="img_rodape" class="img_rodape">
+    </footer>
+
+    <script>
+        const slideControllers = document.querySelectorAll('.slide-controller');
+        let currentIndex = 0;
+
+        function updateSlide() {
+            const slidesList = document.querySelector('.slides-list');
+            slidesList.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slideControllers.length;
+            updateSlide();
+        }
+
+        setInterval(nextSlide, 3000); // Muda de slide a cada 3 segundos (3000 milissegundos)
+    </script>
+</body>
+
+</html>
